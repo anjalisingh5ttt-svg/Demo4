@@ -1,41 +1,42 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_Y3JlZGlibGUtYXJhY2huaWQtOTMuY2xlcmsuYWNjb3VudHMuZGV2JA
+CLERK_SECRET_KEY=sk_test_60DdiYrusgiUx5CNaw9S53jcwTQEH8t5LCixxfAJ5Z
+# clerk configuration (can include secrets)
+/.clerk/
+node_modules
+# Dependencies
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+node_modules/
 
-# testing
-/coverage
+# Next.js build output
 
-# next.js
-/.next/
-/out/
+.next/
+out/
+build/
 
-# production
-/build
+# Environment variables (VERY IMPORTANT)
 
-# misc
-.DS_Store
-*.pem
+.env
+.env.local
+.env.development
+.env.production
 
-# debug
+# Sanity / Clerk
+
+.sanity/
+.clerk/
+
+# Logs
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# OS files
 
-# vercel
-.vercel
+.DS_Store
+Thumbs.db
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Misc
+
+*.log
